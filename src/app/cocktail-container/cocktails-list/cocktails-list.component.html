@@ -1,6 +1,7 @@
 <div class="row">
   <div class="list-group col-12">
     <a
+      [appActive] ="index === activeCocktail"
       (click)="pickCocktail(index)"
       href="#"
       class="list-group-item list-group-item-action"
