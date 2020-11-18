@@ -18,9 +18,4 @@ export class CocktailsListComponent implements OnInit {
       this.cocktails = cocktails;
     });
   }
-
-  pickCocktail(index: number): void {
-    this.activeCocktail = index;
-    this.cocktailService.selectCocktail(index);
-  }
 }
