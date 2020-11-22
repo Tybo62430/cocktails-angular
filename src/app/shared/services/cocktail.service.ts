@@ -41,4 +41,15 @@ export class CocktailService {
   getCocktail(index: number): Cocktail {
     return this.cocktails.value[index];
   }
+
+  addCocktail(cocktail: Cocktail) {
+    const cocktails = this.cocktails.value;
+    cocktails.push({
+      name: cocktail.name,
+      img: cocktail.img,
+      desc: cocktail.desc,
+      ingredients: cocktail.ingredients,
+    });
+    this.cocktails.next(cocktails);
+  }
 }
