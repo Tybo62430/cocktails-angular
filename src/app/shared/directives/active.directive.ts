@@ -4,18 +4,18 @@ import { Directive, HostBinding, Input, OnChanges } from '@angular/core';
   selector: '[appActive]',
 })
 export class ActiveDirective implements OnChanges {
-  @Input('appActive') isActive: boolean;
-  @HostBinding('style.backgroundColor') backGroundColor: string;
+  @HostBinding('style.backgroundColor') backgroundColor: string;
   @HostBinding('style.color') color: string;
+  @Input('appActive') isActive: boolean;
 
   constructor() {}
 
   ngOnChanges() {
     if (this.isActive) {
-      this.backGroundColor = '#3498db';
-      this.color = '#ecf0f1';
+      this.backgroundColor = '#3498db';
+      this.color = 'white';
     } else {
-      this.backGroundColor = 'transparent';
+      this.backgroundColor = 'transparent';
       this.color = 'black';
     }
   }

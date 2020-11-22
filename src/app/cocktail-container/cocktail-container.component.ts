@@ -8,12 +8,9 @@ import { CocktailService } from '../shared/services/cocktail.service';
   providers: [CocktailService],
 })
 export class CocktailContainerComponent implements OnInit {
-
   constructor() {}
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
-  
+  updateCocktail(index: number): void {}
 }

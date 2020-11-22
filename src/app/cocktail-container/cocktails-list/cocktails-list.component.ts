@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { CocktailService } from 'src/app/shared/services/cocktail.service';
 import { Cocktail } from '../../shared/models/cocktail.model';
-import { CocktailService } from '../../shared/services/cocktail.service';
 
 @Component({
   selector: 'app-cocktails-list',
   templateUrl: './cocktails-list.component.html',
-  styleUrls: ['./cocktails-list.component.scss'],
+  styleUrls: ['./cocktails-list.component.css'],
 })
 export class CocktailsListComponent implements OnInit {
-  public cocktails: Cocktail[];
-  activeCocktail: number = 0;
+  cocktails: Cocktail[];
 
   constructor(private cocktailService: CocktailService) {}
+  public activeCocktail: number = 0;
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.cocktailService.cocktails.subscribe((cocktails: Cocktail[]) => {
       this.cocktails = cocktails;
     });

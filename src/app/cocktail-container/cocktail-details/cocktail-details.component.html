@@ -16,20 +16,21 @@
 <hr />
 <div class="row">
   <ul class="list-group col-12">
-    <li *ngFor="let ingredient of cocktail.ingredients" class="list-group-item">
+    <li
+      class="list-group-item list-group-item-action"
+      *ngFor="let ingredient of cocktail.ingredients"
+    >
       {{ ingredient.name }}
-      <span class="badge badge-pill badge-info">{{ ingredient.quantity }}</span>
+      <span class="badge badge-default badge-pill ml-auto">{{
+        ingredient.quantity
+      }}</span>
     </li>
   </ul>
 </div>
 <hr />
-<hr />
 <div class="row">
-  <button class="btn btn-success" routerLink="getUrl()">Editer cocktail</button>
-  <button
-    class="btn btn-secondary ml-auto"
-    (click)="addPanier(cocktail.ingredients)"
-  >
+  <button class="btn btn-success" [routerLink]="getUrl()">Editer cocktail</button>
+  <button class="btn btn-secondary ml-auto" (click)="addPanier(cocktail.ingredients)">
     Ajouter au panier
   </button>
 </div>

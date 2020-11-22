@@ -9,7 +9,7 @@ import { PanierService } from 'src/app/shared/services/panier.service';
   styleUrls: ['./ingredients-list.component.css'],
 })
 export class IngredientsListComponent implements OnInit, OnDestroy {
-  public ingredients: Ingredient[];
+  public ingredients: Ingredient[] = [];
   private subscription: Subscription;
 
   constructor(private panierService: PanierService) {}

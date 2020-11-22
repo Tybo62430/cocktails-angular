@@ -13,7 +13,7 @@ export class CocktailService {
       'http://anotherwhiskyformisterbukowski.com/wp-content/uploads/2016/09/mojito-1.jpg',
       'Le mojito, prononcé en espagnol, est un cocktail à base de rhum, de citron vert et de feuilles de menthe fraîche, né à Cuba dans les années 1910.',
       [
-        new Ingredient('perrier', 1),
+        new Ingredient('perrier', 3),
         new Ingredient('citron', 2),
         new Ingredient('sucre', 3),
       ]

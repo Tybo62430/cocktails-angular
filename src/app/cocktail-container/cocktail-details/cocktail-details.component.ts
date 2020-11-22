@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Ingredient } from 'src/app/shared/models/ingredient.model';
+import { CocktailService } from 'src/app/shared/services/cocktail.service';
 import { PanierService } from 'src/app/shared/services/panier.service';
 import { Cocktail } from '../../shared/models/cocktail.model';
-import { CocktailService } from '../../shared/services/cocktail.service';
 
 @Component({
-  selector: 'app-cocktails-details',
-  templateUrl: './cocktails-details.component.html',
-  styleUrls: ['./cocktails-details.component.css'],
+  selector: 'app-cocktail-details',
+  templateUrl: './cocktail-details.component.html',
+  styleUrls: ['./cocktail-details.component.css'],
 })
-export class CocktailsDetailsComponent implements OnInit {
-  public cocktail: Cocktail;
+export class CocktailDetailsComponent implements OnInit {
+  cocktail: Cocktail;
   public index: number;
   constructor(
     private cocktailService: CocktailService,
