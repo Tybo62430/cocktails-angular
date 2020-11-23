@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -9,6 +8,7 @@ import { CocktailContainerComponent } from './cocktail-container.component';
 import { CocktailEditComponent } from './cocktail-edit/cocktail-edit.component';
 import { FilterPipe } from '../shared/pipes/filter.pipe';
 import { cocktailRouting } from "./cocktail.routing";
+import { SharedModule } from '../shared/modules/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { cocktailRouting } from "./cocktail.routing";
     CocktailEditComponent,
     FilterPipe,
   ],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, cocktailRouting],
+  imports: [SharedModule, FormsModule, ReactiveFormsModule, RouterModule, cocktailRouting],
   providers: [],
   exports: [],
 })
