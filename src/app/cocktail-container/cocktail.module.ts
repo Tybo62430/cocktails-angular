@@ -8,6 +8,7 @@ import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.co
 import { CocktailContainerComponent } from './cocktail-container.component';
 import { CocktailEditComponent } from './cocktail-edit/cocktail-edit.component';
 import { FilterPipe } from '../shared/pipes/filter.pipe';
+import { cocktailRouting } from "./cocktail.routing";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { FilterPipe } from '../shared/pipes/filter.pipe';
     CocktailEditComponent,
     FilterPipe,
   ],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, cocktailRouting],
   providers: [],
   exports: [],
 })
